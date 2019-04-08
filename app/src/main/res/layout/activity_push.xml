@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PushActivity">
+
+
+    <EditText
+        android:id="@+id/courseID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="162dp"
+        android:layout_marginLeft="162dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="163dp"
+        android:layout_marginRight="163dp"
+        android:layout_marginBottom="10dp"
+        android:layout_weight="2"
+        android:hint="Course ID"
+        app:layout_constraintBottom_toTopOf="@+id/courseName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup2" />
+
+    <EditText
+        android:id="@+id/courseName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="147dp"
+        android:layout_marginLeft="147dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="147dp"
+        android:layout_marginRight="147dp"
+        android:layout_marginBottom="10dp"
+        android:layout_weight="2"
+        android:hint="Course Name"
+        app:layout_constraintBottom_toTopOf="@+id/grade"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/courseID" />
+
+    <EditText
+        android:id="@+id/grade"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="177dp"
+        android:layout_marginLeft="177dp"
+        android:layout_marginTop="21dp"
+        android:layout_marginEnd="178dp"
+        android:layout_marginRight="178dp"
+        android:layout_marginBottom="30dp"
+        android:layout_weight="2"
+        android:hint="Grade"
+        app:layout_constraintBottom_toTopOf="@+id/button4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/courseName" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="161dp"
+        android:layout_marginLeft="161dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="162dp"
+        android:layout_marginRight="162dp"
+        android:layout_marginBottom="87dp"
+        android:text="Update"
+        android:onClick="addGrade"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/grade" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="195dp"
+        android:layout_marginBottom="30dp"
+        android:gravity="top|center"
+        android:orientation="horizontal"
+        android:padding="10sp"
+        app:layout_constraintBottom_toTopOf="@+id/courseID"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RadioButton
+            android:id="@+id/rad_bart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="radioClick"
+            android:text="Bart" />
+
+        <RadioButton
+            android:id="@+id/rad_ralph"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:onClick="radioClick"
+            android:text="Ralph" />
+
+        <RadioButton
+            android:id="@+id/rad_milhouse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="radioClick"
+            android:text="Milhouse" />
+
+        <RadioButton
+            android:id="@+id/rad_lisa"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="radioClick"
+            android:text="Lisa" />
+
+    </RadioGroup>
+
+
+
+</android.support.constraint.ConstraintLayout>
